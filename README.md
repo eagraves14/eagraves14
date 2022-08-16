@@ -15,4 +15,6 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-TEST TEST TEST
+I am an ex-consultant pivoting into data science and advanced analytics. This repository contains my work in the Data Science Career Track at Springboard including two Capstone projects.
+
+Connect with me on LinkedIn!  linkedin.com/in/eric-anthony-graves
