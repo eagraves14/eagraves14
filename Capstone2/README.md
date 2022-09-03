@@ -16,7 +16,7 @@ The data was already clean and did not have missing values.
 
 ## Visualizing the Information
 
-Many of the fields exhibited at least a slight correlation with attrition rate.  Below, we focus on some of the more prominent associations.
+Many of the fields exhibited at least a slight correlation with attrition rate.  Below, we focus on some of the more prominent associations.  Note that these do not necessary suggest causation, and many features are likely related (e.g., job role and whether it is overtime-eligible).
 
 **Numerical variables:**
 
@@ -41,3 +41,33 @@ Note on the graph: the median number of companies worked for the Attrition group
 *Years with current manager*: The longer someone has the same manager, the less likely they are to leave.
 
 ![ManagerYrs_table](../reports/figures/ManagerYrsByAttrition.png)
+
+**Categorical variables:**
+
+*Survey responses*: Various survey responses related to employee satisfaction were correlated with attrition rates.
+
+![Environment_table](../reports/figures/AttritionByEnvironment.png)
+
+![JobInvolve_table](../reports/figures/AttritionByJobInvolve.png)
+
+![JobSat_table](../reports/figures/AttritionByJobSat.png)
+
+![Relationship_table](../reports/figures/AttritionByRelationship.png)
+
+![WorkLife_table](../reports/figures/AttritionByWorkLife.png)
+
+*Overtime-eligible*: Overtime-eligible positions experience higher turnover.
+
+![Overtime_table](../reports/figures/AttritionByOvertime.png)
+
+*Travel frequency*: Higher amounts of travel are associated with higher turnover.
+
+![Travel_table](../reports/figures/AttritionByTravel.png)
+
+*Marital status*: Single, never-married employees exhibit higher attrition levels.
+
+![Marital_table](../reports/figures/AttritionByMarital.png)
+
+*Job role*: Certain roles experience higher attrition rates.
+
+![JobRole_table](../reports/figures/AttritionByJobRole.png)
