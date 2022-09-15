@@ -76,7 +76,7 @@ Note on the graph: the median number of companies worked for the Attrition group
 
 This exercise was a binary classification problem, so I primarily explored a logistic regression and a random forest classifier.  I also used Pycaret to quickly check other models.
 
-The logistic regression had the best results, which were classified by high precision, albeit low recall.  The confusion matrix for the test set is shown below.
+The logistic regression had the best results, consisting of high precision but low recall.  The confusion matrix for the test set is shown below.
 
 ![ConfusionMatrix](reports/figures/LogRegConfusionMatrix.png)
 
@@ -95,3 +95,7 @@ Nevertheless, the high precision suggests the model can be a valuable supplement
 As previewed in the visualization section earlier, the chart below shows which characteristics have the largest predictive impact in the model, as measured by SHAP feature importance.
 
 ![FeatureImportances](reports/figures/FeatureImportances.png)
+
+## Opportunities for Improvement
+
+The main opportunity for improvement in the model is to improve recall, which I believe can only really be done with more/better features.  In other words, there are other factors at play that the dataset does not have. The more we are able to capture, the higher the recall we should be able to achieve.  In addition to the examples mentioned above — being recruited and life events, which we may not be able to track — there are other features that we may actually be able to track, e.g., asking via survey whether an employee feels a sense of mission/purpose with their role and/or the company (which is correlated with retention according to https://www.netsuite.com/portal/resource/articles/human-resources/employee-turnover-causes.shtml)
