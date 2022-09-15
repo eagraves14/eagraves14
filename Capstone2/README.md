@@ -8,7 +8,7 @@
 
 The table below shows the fields available in the dataset, separated by category. The target feature is a binary label called Attrition.
 
-![field_table](../reports/figures/Capstone2_fields_table.png)
+![field_table](reports/figures/Capstone2_fields_table.png)
 
 (Certain other fields were also present but are omitted because they did not provide meaningful information)
 
@@ -22,52 +22,52 @@ Many of the fields exhibited at least a slight correlation with attrition rate. 
 
 *Age*: Attrition is higher among younger people.  Note the maximum age in this dataset is 60 - this may have been done intentionally to minimize the presence of retirements in the data set.
 
-![Age_table](../reports/figures/AgeByAttrition.png)
+![Age_table](reports/figures/AgeByAttrition.png)
 
 *Distance from home*: Attrition is higher among those who live farther from work.
 
-![Distance_table](../reports/figures/DistanceByAttrition.png)
+![Distance_table](reports/figures/DistanceByAttrition.png)
 
 *Number of prior companies*: While not obvious from the graphic below, attrition rate is positively correlated with number of prior companies worked at, likely due at least in part to confounding factors (e.g., employee may be in a function or role that is prone to high turnover in general).
 
 Note on the graph: the median number of companies worked for the Attrition group is 1, which is less than the median for the non-Attrition group. However, the tail is longer for the Attrition group, and the average is higher.
 
-![Companies_table](../reports/figures/CompaniesByAttrition.png)
+![Companies_table](reports/figures/CompaniesByAttrition.png)
 
 *Total working years*: Similar to the trend for age, attrition is higher among those with fewer total working years.
 
-![WorkingYrs_table](../reports/figures/WorkingYrsByAttrition.png)
+![WorkingYrs_table](reports/figures/WorkingYrsByAttrition.png)
 
 *Years with current manager*: The longer someone has the same manager, the less likely they are to leave.
 
-![ManagerYrs_table](../reports/figures/ManagerYrsByAttrition.png)
+![ManagerYrs_table](reports/figures/ManagerYrsTable.png)
 
 **Categorical variables:**
 
 *Survey responses*: Various survey responses related to employee satisfaction were correlated with attrition rates.
 
-![Environment_table](../reports/figures/AttritionByEnvironment.png)
+![Environment_table](reports/figures/AttritionByEnvironment.png)
 
-![JobInvolve_table](../reports/figures/AttritionByJobInvolve.png)
+![JobInvolve_table](reports/figures/AttritionByJobInvolve.png)
 
-![JobSat_table](../reports/figures/AttritionByJobSat.png)
+![JobSat_table](reports/figures/AttritionByJobSat.png)
 
-![Relationship_table](../reports/figures/AttritionByRelationship.png)
+![Relationship_table](reports/figures/AttritionByRelationship.png)
 
-![WorkLife_table](../reports/figures/AttritionByWorkLife.png)
+![WorkLife_table](reports/figures/AttritionByWorkLife.png)
 
 *Overtime-eligible*: Overtime-eligible positions experience higher turnover.
 
-![Overtime_table](../reports/figures/AttritionByOvertime.png)
+![Overtime_table](reports/figures/AttritionByOvertime.png)
 
 *Travel frequency*: Higher amounts of travel are associated with higher turnover.
 
-![Travel_table](../reports/figures/AttritionByTravel.png)
+![Travel_table](reports/figures/AttritionByTravel.png)
 
 *Marital status*: Single, never-married employees exhibit higher attrition levels.
 
-![Marital_table](../reports/figures/AttritionByMarital.png)
+![Marital_table](reports/figures/AttritionByMarital.png)
 
 *Job role*: Certain roles experience higher attrition rates.
 
-![JobRole_table](../reports/figures/AttritionByJobRole.png)
+![JobRole_table](reports/figures/AttritionByJobRole.png)
