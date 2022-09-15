@@ -71,3 +71,27 @@ Note on the graph: the median number of companies worked for the Attrition group
 *Job role*: Certain roles experience higher attrition rates.
 
 ![JobRole_table](reports/figures/AttritionByJobRole.png)
+
+## Modeling & Predicting
+
+This exercise was a binary classification problem, so I primarily explored a logistic regression and a random forest classifier.  I also used Pycaret to quickly check other models.
+
+The logistic regression had the best results, which were classified by high precision, albeit low recall.  The confusion matrix for the test set is shown below.
+
+![ConfusionMatrix](reports/figures/LogRegConfusionMatrix.png)
+
+As shown by the table below, I confirmed that changing the probability threshold for classification did not increase recall without a similar or greater drop in precision.
+
+![MetricHeatMap](reports/figures/LogRegMetricHeatmap.png)
+
+As shown by the PyCaret results below, none of the other models yielded high precision and high recall either.
+
+![PyCaretResults](reports/figures/PyCaretResults.png)
+
+I believe this is a product of attrition being potentially driven by many factors, including factors beyond the information available in the database (e.g., being recruited for a better opportunity; life events such as relocation, career shifts, going back to school; etc.).
+
+Nevertheless, the high precision suggests the model can be a valuable supplement to manager intuition; i.e., if the model predicts a flight risk, it is usually real, and we have the opportunity to take action if desired.
+
+As previewed in the visualization section earlier, the chart below shows which characteristics have the largest predictive impact in the model, as measured by SHAP feature importance.
+
+![FeatureImportances](reports/figures/FeatureImportances.png)
