@@ -1,8 +1,18 @@
 # Predicting Employee Attrition
 
+### The problem
+
 *By now everyone has seen a headline about the 'Great Resignation' - the significantly high employee attrition rates following the COVID-19 pandemic.  While the name may imply that the phenomenon is new and temporary, it is actually a continuation of a decade-long trend of increasing voluntary attrition (https://hbr.org/2022/03/the-great-resignation-didnt-start-with-the-pandemic).  Thus, HR teams will need to continue to contend with rising turnover among the myriad of other issues they are facing such as the rise of remote/hybrid work arrangements and the corresponding heightened fluidity in the talent market.*
 
+### The cost
+
+*Voluntary turnover has various tangible costs. More direct costs include money spent on recruiters and position advertisements, internal time spent recruiting and interviewing, and onboarding/training costs/time. Less direct costs can include lost revenue (e.g., lost clients for customer-facing roles) and higher costs driven by lower efficiency due to less experience with the company. For salaried employees, some experts estimate that turnover can cost tens of thousands of dollars, even up to two times salary (https://www.gallup.com/workplace/236051/real-value-getting-exit-interview-right.aspx).*
+
+### The response
+
 *Companies are building and expanding their People Analytics teams to apply data science and advanced analytics to help meet these challenges.  In this project, I have used a public HR dataset containing anonymized information about ~1,500 employees at a company to develop a statistical model to predict employee attrition (https://data.world/aaizemberg/hr-employee-attrition).  The information includes fields such as role, department, educational background, compensation, demographic information, internal and external work history, responses to employee surveys (about, for example, engagement, work-life balance, etc.) and, of course, whether that employee voluntarily left.*
+
+*This is a real-world dataset and, to my knowledge, not part of any competitions – my model is original and was not developed with reference to any other work performed on this dataset.*
 
 ## The Data
 
@@ -72,6 +82,16 @@ Note on the graph: the median number of companies worked for the Attrition group
 
 ![JobRole_table](reports/figures/AttritionByJobRole.png)
 
+## Feature Engineering
+
+*Ordinal categorical variables*: Certain fields were treated as ordinal categorical variables, such as some of the survey response fields (where the responses range from 1 to 4).  However, certain survey questions showed little difference in attrition rate among values from 2-4, but had a much higher attrition probability for a response of 1; these were binary encoded as 0 for a response of 1, or 1 for a response of greater than 1.
+
+*Nominal categorical variables*: Nominal categorical variables were encoded using dummy encoding. I reviewed which value was "lost" from each feature in the process to confirm that it was not a value that was strongly associated with higher likelihood of attrition based on EDA, so our interpretation of the model would remain intuitive. For example, the value "lost" from the BusinessTravel feature was "Non-Travel," which is the value least positively associated with attrition.
+
+*Numeric variables*: Numerical fields such as age, monthly income, total working years, etc. were scaled using a power transformer due to their long-tailed distributions.
+
+See the relevant notebooks for greater detail.
+
 ## Modeling & Predicting
 
 This exercise was a binary classification problem, so I primarily explored a logistic regression and a random forest classifier.  I also used Pycaret to quickly check other models.
@@ -98,6 +118,8 @@ As previewed in the visualization section earlier, the chart below shows which c
 
 ## Opportunities for Improvement
 
-The main opportunity for improvement in the model is to improve recall, which I believe can only really be done with more/better features.  In other words, there are other factors at play that the dataset does not have. The more we are able to capture, the higher the recall we should be able to achieve.  Besides the examples mentioned above — being recruited and life events, which we may not be able to track — there are other features that we may actually be able to track, e.g., asking via survey whether an employee feels a sense of mission/purpose with their role and/or the company (which is correlated with retention according to https://www.netsuite.com/portal/resource/articles/human-resources/employee-turnover-causes.shtml).
+The main opportunity for improvement in the model is to improve recall, which could be achieved with more/better features.  In other words, there are other factors at play that the dataset does not have. The more we are able to capture, the higher the recall we should be able to achieve.  Besides the examples mentioned above — being recruited and life events, which we may not be able to track — there are other features that we may actually be able to track, e.g., asking via survey whether an employee feels a sense of mission/purpose with their role and/or the company (which is correlated with retention according to https://www.netsuite.com/portal/resource/articles/human-resources/employee-turnover-causes.shtml).
 
 However, because there is so much we can't know, it is doubtful recall will ever be very high.  So, the model would likely remain merely a supplement to managerial intuition/context, and in this vein one other opportunity for improvement would be the development of a clear reporting interface that clearly shows the predicted flight risks and the drivers underlying those predictions.
+
+Aside from feature expansion, in terms of modeling specifically, one other approach that could yield improved results is ensemble modeling, i.e. using a consensus of multiple models to make predictions.
