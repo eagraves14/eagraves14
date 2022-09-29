@@ -17,4 +17,6 @@ Here are some ideas to get you started:
 
 I am an ex-consultant pivoting into data science and advanced analytics. This repository contains my work in the Data Science Career Track at Springboard including two Capstone projects.
 
+My first capstone project can be found under eagraves14/Capstone2. This project consists of a logistic regression model that predicts voluntary employee attrition with 75% precision based on a real-world dataset.
+
 Connect with me on LinkedIn!  linkedin.com/in/eric-anthony-graves
