@@ -19,4 +19,8 @@ I am an ex-consultant pivoting into data science and advanced analytics. This re
 
 My first capstone project can be found under eagraves14/Capstone2. This project consists of a logistic regression model that predicts voluntary employee attrition with 75% precision based on a real-world dataset.
 
+My second capstone project can be found at the Tableau Public link below, with a short discussion document also included under eagraves14/Capstone3.  This project consists of a Tableau workbook that analyzes the popularity of games on the Steam platform across dimensions such as genre, release date, and pricing.
+
+https://public.tableau.com/app/profile/eric.graves/viz/SteamGamePopularityv2/TopGames?publish=yes
+
 Connect with me on LinkedIn!  linkedin.com/in/eric-anthony-graves
